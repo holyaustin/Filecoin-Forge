@@ -79,27 +79,88 @@ Navigate to the tutorials directory to find step-by-step guides for building and
 ## Check Out the Case Studies
 Visit the case-studies directory to explore real-world use cases of Filecoin storage and retrieval.
 
-1. Kezayya
+1. Storz - Advance Web3 file sharing and storing application
+Storz is a new file sharing and storage service that utilizes IPFS. Storz is highly secure, with all files being encrypted and stored on a decentralized network.
+ GitHub Repo : https://github.com/anomic30/Storz
+ storz.pages.dev : https://storz.pages.dev/
+Youtube : https://youtu.be/a53leOYzAow
+
+2. IPFS for WordPress
+The all-in-one plugin that provides powerful & comprehensive IPFS solutions for WordPress CMS.
+Github Repo : https://github.com/Zhixuan0318/ipfs-for-wordpress
+https://devpost.com/software/ipfs-for-wordpress
+
+
+3. Kezayya
 Kezayya is a web3 project with the aim of helping users store files and share them in a user-friendly manner. This project is a web3 version of google drive or dropbox for file storage and sharing.
+ kezayya.vercel.app https://kezayya.vercel.app/
+ youtu.be https://youtu.be/4hIymL5lCs0
+ GitHub Repo https://github.com/holyaustin/kezayya
+ https://devpost.com/software/kezayya
 
-2. 
+4. Dorsia Club
+NFT Business Cards: dynamic NFTs that you can customize with your name, position, and social links. Generated and pinned to ipfs on-demand by an off-chain oracle.
+https://youtu.be/i_RjWFEeGik
+ dorsiaclub.netlify.app  :  https://dorsiaclub.netlify.app/
+ GitHub Repo : https://github.com/0xdeenz/dorsiaclub/
 
-3. 
+5. TradeRep
+dApp that helps investors and beginners save money and time by filtering good traders from scammers with a reputation verified by blockchain
+https://youtu.be/k7EqWChe7Kk
+ traderep-app.vercel.app  : https://traderep-app.vercel.app/
+ GitHub Repo :  https://github.com/traderep-space/app
+ https://devpost.com/software/traderep
 
-4. 
+6. Keysafe Network
+Keysafe protocol is the missing layer between Web2 and Web3 that connects Web2 and Web3 accounts in a decentralized and trustworthy way
+https://devpost.com/software/keysafe-network
+Github: https://github.com/keysafe-protocol
+https://demo.keysafe.network/
 
-5. 
+7. create-ipfs-app
+Set up a decentralized web3 app by running one command (deploy to web3, pinata, moralis, infura, etc).
+https://devpost.com/software/create-ipfs-app
+ GitHub Repo : https://github.com/alexbakers/create-ipfs-app
+ www.npmjs.com : https://www.npmjs.com/package/create-ipfs-app
+ www.jsdelivr.com : https://www.jsdelivr.com/package/npm/create-ipfs-app
 
-6. 
+8. CipherBox
+Encrypt your valuable private data in CipherBox. Expand the application scope of decentralized storage here.
+https://devpost.com/software/cipherbox
+ GitHub Repo : https://github.com/y-ang2010/cipherbox
+ www.youtube.com : https://youtu.be/DBKoylEHblo
 
-7. 
+0. Odyssey
+Our mascot "Cactus" is on a odyssey to find the rarest utility NFTs.
+https://youtu.be/Tq0jaRTc2NU
+ GitHub Repo : https://github.com/entropyylabs/odyssey
 
-8. 
+10. Credly
+Credly is a Community NFT-as-a-service platform powered by IPFS and Filecoin, providing an easy way for web3 communities to launch engagement NFTs.
+https://credly.dev/
+Credly Client: https://github.com/iamminci/credly
+Credly Server: https://github.com/iamminci/credly-server
+Credly Cron Job: https://github.com/iamminci/credly-cron
 
-0. 
+11. 
 
-10. 
+12. 
 
+13. 
+
+14. 
+
+15. 
+
+16. 
+
+17. 
+
+18. 
+
+19.  
+
+20.  
 
 ## Read the Guides
 The guides directory contains comprehensive documentation with code examples for common workflows.
