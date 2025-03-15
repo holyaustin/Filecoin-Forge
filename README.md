@@ -79,6 +79,28 @@ Navigate to the tutorials directory to find step-by-step guides for building and
 ## Check Out the Case Studies
 Visit the case-studies directory to explore real-world use cases of Filecoin storage and retrieval.
 
+1. Kezayya
+Kezayya is a web3 project with the aim of helping users store files and share them in a user-friendly manner. This project is a web3 version of google drive or dropbox for file storage and sharing.
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+0. 
+
+10. 
+
+
 ## Read the Guides
 The guides directory contains comprehensive documentation with code examples for common workflows.
 
