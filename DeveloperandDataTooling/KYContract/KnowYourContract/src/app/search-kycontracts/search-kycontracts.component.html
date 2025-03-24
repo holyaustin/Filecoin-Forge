@@ -1,0 +1,23 @@
+<span class="p-input-icon-right flex">
+    <i class="pi pi-search" (click)="searchContract()"></i>
+    <input type="text" placeholder="Search Project Name" pInputText [(ngModel)]="search" class="flex-1 flex align-items-center justify-content-center bg-grey-500 font-bold text-gray-900 m-2 px-5 py-3 border-round" />
+</span>
+<div class="surface-ground px-4 py-5 md:px-6 lg:px-8">
+    <div class="grid">
+        <div *ngFor="let contractItem of contracts" class="col-12 md:col-6 lg:col-3" (click)="viewProjectDetails(contractItem)">
+            <div class="surface-card shadow-2 p-3 border-round">
+                <div class="flex justify-content-between mb-3">
+                    <div>
+                        <span class="block text-500 font-medium mb-3">{{contractItem.projectName}}</span>
+                        <div class="text-900 font-medium text-xl">{{contractItem.projectContractAddress}}</div>
+                    </div>
+                    <div class="flex align-items-center justify-content-center bg-white-100 border-round" style="width:2.5rem;height:2.5rem">
+                        <img src="{{contractItem.projectLogo}}" alt="Logo" style="height: 52px; width: 52px;">
+                    </div>
+                </div>
+                <span class="text-green-500 font-medium">{{contractItem.score}} </span>
+                <span class="text-500">Contract Safety Score</span>
+            </div>
+        </div>
+    </div>
+</div>

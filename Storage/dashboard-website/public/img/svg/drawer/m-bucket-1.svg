@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>st-fill</title>
+    <g id="Overview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-45.000000, -207.000000)" fill="#775DA6" fill-rule="nonzero" id="g-4">
+            <g transform="translate(0.000000, -1.000000)">
+                <g id="st-fill" transform="translate(45.000000, 208.000000)">
+                    <path d="M15.8333333,19 L15.8333333,10.5555556 L3.16666667,10.5555556 L3.16666667,19 L1.05555556,19 C0.472588323,19 0,18.5274117 0,17.9444444 L0,1.05555556 C0,0.472588323 0.472588323,0 1.05555556,0 L14.7777778,0 L19,4.22222223 L19,17.9444444 C19,18.5274117 18.5274117,19 17.9444444,19 L15.8333333,19 L15.8333333,19 Z M13.7222222,19 L5.27777777,19 L5.27777777,12.6666667 L13.7222222,12.6666667 L13.7222222,19 Z" id="shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,126 @@
+<!-- header -->
+<div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between">
+    <div class="flex items-center">
+        <h1 class="text-2xl font-semibold">Upload Album</h1>
+        <!-- <div class="mx-8 text-gray-300 text-sm"  *ngIf="walletAddress">
+            <button class="hover:text-white w-full rounded py-2 flex items-center justify-start" [routerLink]="['/transaction-logs']">
+                <i class="material-icons pr-2">history</i>
+                <p>History</p>
+            </button>
+        </div> -->
+    </div>
+    <div>
+        <app-wallet  #walletCompoment ></app-wallet>
+    </div>
+</div>
+
+<div *ngIf="!walletAddress">
+    <div class="w-full mt-44 flex flex-col items-center justify-center">
+        <div class="text-3xl font-semibold">Your wallet is not connected!</div>
+        <button (click)="connectWallet()"
+            class="w-48 bg-neutral-100 text-neutral-900 shadow rounded-full flex items-center justify-center mt-6 p-2">
+            <i class="material-icons mr-2">account_balance_wallet</i>
+            Connect Wallet
+        </button>
+    </div>
+</div>
+
+<div *ngIf="walletAddress" class="px-4 py-3">
+    <div class="w-3/4 ml-8 text-sm">
+        <div class="flex">
+            <div class="flex items-start h-52 w-52 mr-4">
+                <img [src]="album.thumbnailFile.src" class="w-full h-full shadow-md hover:cursor-pointer"
+                    (click)="thumbFile.click()" />
+
+                <input #thumbFile type="file" (change)="fileHelper.onFileChanged($event, album.thumbnailFile)" accept="image/*"
+                    style="display: none" />
+            </div>
+            <div class="flex flex-col">
+                <div>
+                    <mat-form-field appearance="outline" color="accent" class="w-full">
+                        <mat-label>Title</mat-label>
+                        <input matInput placeholder="Title" required [(ngModel)]="album.title" />
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-form-field appearance="outline" color="accent" class="w-3/4 mr-2">
+                        <mat-label> Artist</mat-label>
+                        <input matInput placeholder="Artist" required [(ngModel)]="album.artist" />
+                    </mat-form-field>
+
+                    <!-- <mat-form-field appearance="outline" color="accent" class="w-1/4">
+                        <mat-label>Genre</mat-label>
+                        <input matInput placeholder="Genre" required [(ngModel)]="album.genre" />
+                    </mat-form-field> -->
+
+                    <mat-form-field appearance="outline" color="accent" class="w-1/4">
+                        <mat-label>Genre</mat-label>
+                        <mat-select [(ngModel)]="album.genre" >
+                          <mat-option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" color="accent" class="w-full">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="5"
+                        [(ngModel)]="album.description" ></textarea>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="flex items-end mb-3 ml-3">
+                <button mat-flat-button color="accent" class="w-44" (click)="upload()" 
+                    [disabled]="!canUpload()">
+                    <i class="material-icons h-6 w-6 mr-1">cloud_upload</i>
+                    Upload Album
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-3 text-sm">
+        <div class="flex p-2 text-center items-center">
+            <div class="w-72 px-2">
+                <div class="flex items-end justify-start">
+                    <button class="w-36 bg-neutral-800 shadow rounded-full py-2 px-4 flex items-center justify-center "
+                        (click)="addAudioFile.click()">
+                        <i class="material-icons mr-2">queue</i>
+                        Add Song
+                    </button>
+                </div>
+            </div>
+            <div class="w-96 px-2">Song Title</div>
+            <div class="w-72 px-2">Artist</div>
+        </div>
+        <div class="border-b border-neutral-800 mb-4"> </div>
+        <div class="overflow-y-scroll scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-neutral-900"
+            style="height: 38vh;">
+            <div class="flex p-1 items-center hover:bg-neutral-700 hover:rounded-sm text-sm"
+                *ngFor="let song of album.songs; let i = index">
+
+                <!-- <div class="w-12 flex items-center justify-center">
+                    {{i+1}}
+                </div> -->
+
+                <div class="flex flex-col w-72 px-2 items-center justify-center">
+                    <audio controls id="audio-{{i+1}}" class="w-full h-10 mr-4">
+                        <source >
+                    </audio>
+                </div>
+                <div class="flex w-96 px-2 items-center justify-center ">
+                    <mat-form-field appearance="outline" color="accent" class="w-96">
+                        <input matInput placeholder="Title" required [(ngModel)]="song.title" />
+                    </mat-form-field>
+                </div>
+                <div class="flex w-72 px-2">
+                    <mat-form-field appearance="outline" color="accent" class="w-72">
+                        <input matInput placeholder="Artist" required [(ngModel)]="song.artist" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input #addAudioFile type="file" (change)="onAddAudioFileChanged($event)" accept="audio/*" style="display: none" />
+</div>

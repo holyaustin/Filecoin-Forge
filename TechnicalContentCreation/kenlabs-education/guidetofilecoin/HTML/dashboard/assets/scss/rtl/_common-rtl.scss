@@ -1,0 +1,245 @@
+//
+// _common.scss
+//
+
+/*********************************/
+/*     Common-RTL      */
+/*===============================*/
+.blog {
+    .author {
+        right: 5% !important;
+        left: auto;
+    }
+}
+
+//Blog
+.sidebar {
+    .widget {
+        .widget-search, .searchform { 
+            input[type="text"] {
+                padding-right: 0;
+                padding-left: 45px !important;
+            }
+            input[type="submit"] {
+                left: 10px !important;
+                right: 0;
+            }
+        }
+        .widget-search {
+            .searchform:after {
+                left: 16px !important;
+                right: 0;
+            }
+        }
+        .post-recent {
+            .post-recent-content {
+                padding-right: 10px !important;
+                padding-left: 0;
+            }
+        }
+        .tagcloud {
+            > a {
+                margin: 5px 0 5px 0 10px !important;
+            }
+        }
+    }
+}
+
+//Pharmacy
+.pharpachy-categories {
+    .category-title {
+        right: 20px !important;
+        left: 0;
+    }
+}
+
+//
+// _chat.scss
+//
+
+.chat {
+    .chat-list,
+    .chat-type {
+        .on-off {
+            right: -1px !important;
+            left: auto;
+        }
+    }
+    
+    &.chat-person {
+        .chat-msg {
+            margin-right: 8px !important;
+            margin-left: 0 !important;
+        }
+        .chat-right {
+            justify-content: flex-start;
+            text-align: left;
+            .chat-user-image {
+                .on-off {
+                    left: -1px !important;
+                    right: auto;
+                }
+            }
+            .chat-msg {
+                margin-left: 8px !important;
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+
+//
+// _feature.scss
+//
+.features {
+    .big-icon {
+        left: 20px !important;
+        right: auto;
+    }
+}
+
+
+//
+// home.scss
+//
+
+//Pharmacy Landing
+.home-slider {
+    .carousel-control-next {
+        right: auto;
+        left: 8px !important;
+    }
+    .carousel-control-prev {
+        right: 8px !important;
+        left: auto;
+    }
+}
+
+//Shopping
+.shop-list {
+    .shop-image {
+        .shop-icons  {
+            right: 15px !important;
+            left: auto;
+        }
+    }
+    .label {
+        left: 15px !important;
+        right: auto;
+    }
+    .qty-btn {
+        padding-right: 15px !important;
+        padding-left: 0;
+    }
+}
+
+//
+// _team.scss
+//
+.team {
+    .team-img {
+        .team-social {
+            right: 10px !important;
+            left: auto;
+            transform: translateX(50px);
+        }
+    }
+    .team-person {
+        .team-like {
+            left: 10px !important;
+            right: auto;
+        }
+    }
+}
+
+
+
+//Testi
+//Testimonial
+.swiper-slider-hero, .tns-inner, .tns-nav, .slick-slider {
+    direction: ltr;
+}
+
+.tns-visually-hidden {
+    left: 0 !important;
+    visibility: hidden;
+}
+
+.customer-testi {
+    img {
+        margin-right: 16px !important;
+        margin-left: auto !important;
+    }
+    .content {
+        text-align: left !important;
+    }
+}
+
+
+
+//Timeline
+.timeline-page {
+    .timeline-item {
+        .date-label-left, .duration-right {
+            margin-left: 15px !important;
+            margin-right: 0;
+        }
+        .date-label-left {            
+            float: left !important;
+            margin-right: 0;
+            margin-left: 15px !important;
+            &:after {                
+                left: -34px !important;
+                right: auto;
+            }
+        }        
+        .duration-right {
+            float: right !important;
+            margin-right: 15px !important;
+            margin-left: auto;
+            &:after {                
+                right: -34px !important;
+                left: auto;
+            }
+        }
+        .event {
+            &.event-description-right {
+                text-align: right !important;
+                margin-right: 15px !important;
+                margin-left: 0;
+            }
+            &.event-description-left {
+                text-align: left;
+                margin-left: 15px !important;
+                margin-right: 0;
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        margin-right: 18px !important;
+        margin-left: 0;
+        .timeline-item {
+            .duration {
+                float: right !important;
+                margin-left: 0 !important;
+                margin-right: 15px !important;
+                text-align: right !important;
+                &:after {
+                    right: -21px !important;
+                    left: auto;
+                }
+                .event {
+                    text-align: right !important;
+                    margin-right: 15px !important;
+                    margin-left: auto;
+                }
+            }
+            .event-description-left {
+                text-align: right !important;
+                margin-left: 0 !important;
+                margin-right: 15px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.container {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 40px;
+}
+
+.form {
+    width: 500px;
+    border: 1px solid #008c7345;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}

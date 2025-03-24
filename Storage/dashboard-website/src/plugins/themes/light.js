@@ -1,0 +1,18 @@
+export default {
+  primary: "#6172F3",
+  error: "#FF5252",
+  info: "#2196F3",
+  success: "#4CAF50",
+  warning: "#FFC107",
+  hover: "#8098F9",
+  active: "#444CE7",
+  disabled: "#98A2B3",
+  background: "#ffffff",
+  background2: "#F5F8FF",
+  background3: "#EEF4FF",
+  border1: "#EAECF0",
+  border2: "#E0EAFF",
+  textPrimary: "#101828",
+  textSecondary: "#344054",
+  textInfo: "#667085",
+};

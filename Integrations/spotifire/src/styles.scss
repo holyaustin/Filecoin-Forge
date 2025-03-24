@@ -1,0 +1,115 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'material-icons/iconfont/material-icons.css';
+
+html,
+body {
+    color: whitesmoke;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --glue-font-weight-normal: 400;
+    --glue-font-weight-bold: 700;
+    --glue-font-weight-black: 900;
+    --nav-bar-width: 232px;
+    --background-noise: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=) !important;
+    --buddy-feed-width: 270px;
+}
+
+.playlist-header {
+    height: 20vh;
+    max-height: 500px;
+    min-height: 280px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: none;
+    overflow: hidden;
+    padding-bottom: 24px;
+    position: relative;
+    margin-top: -4.5rem;
+}
+
+.bg-playlist-header {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bg-playlist-gradient {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(#121212)), var(--background-noise);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, #121212 100%), var(--background-noise);
+    height: 52vh;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    padding-bottom: 0.25em !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    margin-top: -0.5em !important;
+}
+
+.mat-dialog-container {
+    background-color: rgb(38, 38, 38);
+}
+
+.mat-snack-bar-container {
+    max-width: 80vw !important;
+    margin-bottom: 5.5rem !important;
+}
+
+.snackbar-success {
+    background-color: rgb(38, 38, 38) !important;
+    color: rgb(245, 245, 245) !important;
+
+    .mat-simple-snackbar {
+        justify-content: center;
+    }
+}
+
+.snackbar-info {
+    background-color: rgb(59 130 246) !important;
+    color: rgb(245, 245, 245) !important;
+    .mat-simple-snackbar {
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
+
+.text-green-550 {
+    color: rgb(29, 185, 84);
+}
+
+.text-green-material {
+    color: #69f0ae;
+}
+
+.snackbar-error {
+    background-color: red !important;
+    color: #fff !important;
+}
+
+.bg-neutral-850 {
+    // 23 38
+    background-color: rgb(30, 30, 30);
+}
+
+.mat-menu-panel {
+    background-color: rgb(30, 30, 30) !important;
+}
+
+.liked-song-icon {
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    padding-top: 0.15rem;
+}

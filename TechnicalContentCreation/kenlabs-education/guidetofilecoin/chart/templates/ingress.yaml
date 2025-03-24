@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name:  guidetofilecoin-xyz
+  annotations:
+    meta.helm.sh/release-name: guidetofilecoin-xyz
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "30"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "1800"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "1800"
+  labels:
+    apptype: guidetofilecoin-xyz
+    app.kubernetes.io/managed-by: Helm
+    heritage: Helm
+    release:  guidetofilecoin-xyz
+spec:
+  ingressClassName: {{.Values.ingress_name}}
+  rules:
+    - host: guidetofilecoin.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: guidetofilecoin-xyz-service
+                port:
+                  number: 80

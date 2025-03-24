@@ -1,0 +1,483 @@
+//
+// components.scss
+//
+
+/*********************************/
+/*     Components-DARK           */
+/*===============================*/
+//
+// components.scss
+//
+
+//Buttons
+@each $name, $value in $colors {
+    .btn-#{$name} {
+        background-color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+        color: $dark !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus {
+            background-color: darken($value, 5%) !important;
+            border-color: darken($value, 5%) !important;
+            color: $dark !important;
+        }
+    }
+
+    .btn-soft-#{$name} {
+        background-color: rgba($value, 0.1) !important;
+        border: 1px solid rgba($value, 0.1) !important;
+        color: #{$value} !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus {
+            background-color: #{$value} !important;
+            border-color: #{$value} !important;
+            color: $dark !important;
+        }
+    }
+
+    .btn-outline-#{$name} {
+        border: 1px solid #{$value};
+        color: #{$value};
+        background-color: transparent;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus,
+        &:not(:disabled):not(.disabled):active {
+            background-color: #{$value};
+            border-color: #{$value};
+            color: $dark !important;
+            box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        }
+    }
+}
+.btn {
+    &.btn-dark {
+        color: $white !important;
+        background: $dark !important;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: darken($dark, 5%) !important;
+            color: $white !important; 
+        }
+    }    
+    &.btn-soft-dark {
+        color: rgba($dark, 0.5) !important;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            color: $white !important; 
+        }
+    }    
+    &.btn-outline-dark {
+        border: 1px solid $gray-100 !important;
+        color: $dark !important;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: $dark !important;
+            color: $white !important;
+        }
+    }
+    &.btn-light {
+        color: $dark !important;
+        border-color: darken($gray-200, 15%) !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }    
+    &.btn-soft-light {
+        color: rgba($dark, 0.5) !important;
+        border: 1px solid darken($gray-200, 15%) !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            color: $dark !important; 
+        }
+    }    
+    &.btn-outline-light {
+        border-color: darken($gray-200, 15%) !important;
+        color: $dark !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }
+}
+
+//Shadow
+.shadow {
+    box-shadow: $shadow !important;
+}
+.shadow-lg {
+    box-shadow: $shadow-lg !important;
+}
+.shadow-md {
+    box-shadow: $shadow-md !important;
+}
+
+//Badges
+@each $name, $value in $colors {
+    .badge-#{$name} {
+        background-color: #{$value} !important;
+        color: $dark !important;
+    }
+
+    .badge-outline-#{$name} {
+        background-color: transparent !important;
+        color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+    }
+    .badge-soft-#{$name} {
+        background-color: rgba($value, 0.1) !important;
+        border: 1px solid rgba($value, 0.1) !important;
+        color: #{$value} !important;
+    }
+}
+
+.badge {
+    &.badge-light {
+        color: $dark !important;
+        background-color: $light !important;
+    }
+
+    &.badge-outline-light {
+        color: $dark !important;
+        border: 1px solid lighten($light, 5%) !important;
+    }
+}
+
+//Dropdowns
+@each $name, $value in $colors {
+    .dropdown-#{$name} {
+        .dropdown-menu {
+            .dropdown-item {
+                &:hover,
+                &.active,
+                &:active,
+                &.focus,
+                &:focus {
+                    background-color: transparent;
+                    color: #{$value} !important;
+                }
+            }
+        }
+    }
+}
+.dropdown-menu {
+    box-shadow: $shadow;
+}
+
+//Alert
+@each $name, $value in $colors {
+    .alert-#{$name} {
+        background-color: rgba($value, 0.9);
+        color: $dark;
+        border-color: $value;
+        .alert-link {
+            color: darken($value, 30%);
+        }
+    }
+    .alert-outline-#{$name} {
+        background-color: transparent;
+        color: $value;
+        border-color: $value;
+    }
+}
+.alert {
+    &.alert-light {
+        background-color: lighten($light, 3%);
+        color: $dark;
+        border-color: $gray-800;
+    }
+}
+
+.breadcrumb {
+    .breadcrumb-item {
+        a {
+            color: $dark;
+        }
+        &:after {
+            color: $dark; 
+        }     
+    }
+}
+
+//Pagination
+.pagination {
+    .page-item {
+        .page-link {
+            color: $dark;
+            border: 1px solid $gray-800;
+            background: $white;
+            &:hover {
+                color: $dark;
+            }
+        }
+        &.active {
+            .page-link {
+                color: $dark;
+            }
+        }
+    }
+}
+
+//Loader
+#preloader {
+    background-image: linear-gradient(45deg, $white, $white);
+}
+
+.progress-box {
+    .progress {
+        background: $gray-800;
+    }
+}
+
+//Accordion
+.accordion {
+    .accordion-item {
+        .accordion-button {
+            &.collapsed {
+                background-color: $white;
+                color: $dark !important;
+                &:before {
+                    color: $dark !important;
+                }
+            }
+        }
+    }
+}
+
+//Nav
+.nav-pills {
+    background: darken($light, 1%);
+    .nav-link {
+        color: $gray-700 !important;
+        &.nav-link-alt {
+            &.active {
+                background: $dark;
+                color: $dark !important;
+            }
+        }
+        &.active {
+            color: $dark !important;
+            .tab-para {
+                color: rgba($white, 0.65) !important;
+            }
+        }
+    }
+}
+
+//blockquote
+.blockquote {
+    border-left: 3px solid $gray-800;
+}
+
+//Form
+.form-control {
+    background: $white;
+    border: 1px solid $gray-800;
+    color: $gray-300 !important;
+    &:focus {
+        background: $white;
+    }
+    &::placeholder{
+        color: $gray-300;
+    }
+}
+
+.form-check-input {
+    background-color: $white;
+    border-color: $gray-800;
+}
+
+//Subscribe form
+.subcribe-form {
+    input {
+        background-color: rgba($white, 0.8);
+        &::placeholder{
+            color: $gray-300;
+        }
+    }
+}
+
+//Select 2
+.select2-container--default {
+    .select2-selection--single {
+        background-color: $white !important;
+        border: 1px solid $gray-800 !important;
+        .select2-selection__rendered {
+            color: $dark !important;
+        }
+        .select2-selection__arrow b {
+            border-color: $dark transparent transparent transparent;
+        }
+    }
+    &.select2-container--open {
+        .select2-selection--single {
+            .select2-selection__arrow b {
+                border-color: transparent transparent $dark transparent;
+            }
+        }
+    }
+    .select2-search--dropdown {
+        .select2-search__field {
+            border: 1px solid $gray-800;
+            background: $light;
+            color: $gray-500;
+        }
+    }
+    .select2-results__option--selected {
+        color: $white !important;
+    }
+    .select2-results__option--highlighted {
+        &.select2-results__option--selectable {
+            color: $white !important;
+        }
+    }
+}
+
+.select2-container--default {
+    .select2-results__option--highlighted.select2-results__option--selectable,
+    .select2-results__option--selected {
+        color: $dark !important;
+    }
+}
+
+.select2-results__option {
+    color: $muted;
+}
+
+.select2-dropdown {
+    border: 1px solid $gray-800 !important;
+    background: $white;
+}
+
+
+//Subscribe form
+.subcribe-form {
+    input {
+        color: $dark !important;
+        background-color: rgba($white, 0.8);
+    }
+}
+
+//Table
+.table-responsive {
+    .table {
+        color: $dark;
+        td,
+        th {
+            border-color: $gray-800;
+        }
+        thead th {
+            border-bottom-color: $gray-800;
+        }
+    } 
+    .table-center {
+        tbody {
+            tr {
+                &:hover {
+                    color: $dark;
+                    background-color: $light;
+                }
+            }
+        }
+    }
+}
+.table {
+    border-color: $gray-800;
+}
+
+.table-responsive .table-center tbody tr:hover {
+    color: #fff;
+    background-color: #253649;
+}
+//Modal
+.modal-content {
+    background: $white;
+    .modal-header {
+        button {
+            &.close {
+                color: $dark;
+            }
+        }
+    }
+    .modal-header,
+    .modal-footer {
+        border-color: $gray-800;
+    }
+}
+
+//Apexcharts
+.apexcharts-tooltip {
+    background: $white !important;
+    color: $dark;
+    border-color: $gray-800 !important;
+}
+
+.apexcharts-gridlines-horizontal,
+.apexcharts-gridlines-vertical,
+.apexcharts-grid,
+.apexcharts-gridline,
+.apexcharts-xaxis-tick,
+.apexcharts-xaxis line,
+.apexcharts-gridline line,
+.apexcharts-radar-series line,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events, 
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events, 
+.apexcharts-radar-series path, 
+.apexcharts-radar-series polygon{
+  stroke: $gray-800 !important;
+}
+
+.apexcharts-data-labels, .apexcharts-datalabels text, .apexcharts-xaxis text, .apexcharts-yaxis text {
+    font-family: $font-family-base !important;
+    fill: $gray-500 !important;
+}
+.apexcharts-tooltip-title{
+    background: $white !important;
+    color: $gray-500 !important;
+    border-color: $gray-800 !important;
+}
+
+.apexcharts-legend-text {
+    color: $gray-500 !important;
+    font-family: $font-family-base!important;
+}
+
+//Social icons
+.social-icon {
+    li {
+        a {
+            color: $dark;
+            border: 1px solid $gray-800;
+            &:hover {
+                color: $dark !important;
+            }
+        }
+    }
+    &.footer-social {
+        li {
+            a {
+                color: $gray-200;
+                border: 1px solid $gray-800 !important;
+                background: $footer;
+            }
+        }
+    }
+    &.social {
+        li {
+            a {
+                color: $gray-800;
+                border-color: $gray-800;
+            }
+        }
+    }
+}

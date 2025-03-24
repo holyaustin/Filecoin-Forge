@@ -1,0 +1,67 @@
+{
+  "name": "zk-data-dao",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@lighthouse-web3/sdk": "^0.2.3",
+    "@rainbow-me/rainbowkit": "^1.0.0",
+    "@tableland/sdk": "^4.2.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^1.4.0",
+    "buffer": "^6.0.3",
+    "cids": "^1.1.9",
+    "cors": "^2.8.5",
+    "discord-oauth2": "^2.11.0",
+    "ethers": "5.7",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.3",
+    "react-spinners": "^0.13.8",
+    "rimble-ui": "^0.14.0",
+    "snarkjs": "^0.6.11",
+    "styled-components": "^6.0.0-rc.1",
+    "viem": "^0.3.30",
+    "wagmi": "^1.0.5",
+    "web-vitals": "^2.1.0",
+    "zokrates-js": "^1.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}

@@ -1,0 +1,35 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: url("/images/landing_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding: 100px;
+}
+
+
+.appTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.appSubTitle {
+  font-size: 60px;
+  font-weight: 700;
+
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.app p {
+  font-size: 60px;
+  font-weight: 500;
+  color: #008c73;
+  margin-bottom: 200px;
+}

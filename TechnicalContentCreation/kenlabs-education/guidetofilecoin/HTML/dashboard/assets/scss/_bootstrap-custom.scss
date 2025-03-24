@@ -1,0 +1,156 @@
+//
+// _Bootstrap-custom.scss
+//
+@each $heading,
+$size in $heading-font-sizes {
+    #{$heading}, .#{$heading} {
+        font-size: $size;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+}
+
+@each $heading,
+$size in $display-font-sizes {
+    .#{$heading} {
+        font-size: $size;
+    }
+}
+
+@each $name,
+$value in $colors {
+    .bg-#{$name} {
+        background-color: #{$value} !important;
+    }
+    .bg-soft-#{$name} {
+        background-color: rgba($value, 0.1) !important;
+        border: 1px solid rgba($value, 0.1) !important;
+        color: #{$value} !important;
+    }
+    .text-#{$name} {
+        color: #{$value} !important;
+    }
+    a {
+        &.text-#{$name} {
+            &:hover,
+            &:focus {
+                color: darken($value, 5%) !important;
+            }
+        }
+    }
+}
+a {
+    transition: all 0.5s ease;
+}
+
+.bg-white-50 {
+    background-color: rgba($white, .5) !important;
+}
+
+.container {
+    @media (min-width: 1400px) {
+        max-width: 1140px !important;
+    }
+}
+
+.row > * {
+    position: relative;
+}
+
+//li (list inline item)
+.list-inline-item:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 5px;
+}
+
+.margin-nagative {
+    &.mt-n5 {
+        margin-top: -48px;
+    }
+}
+
+.d-flex {
+    .flex-1 {
+        flex: 1;
+    }
+}
+
+// Rounded
+.rounded {
+    border-radius: 5px !important;
+}
+.rounded-top {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+.rounded-left {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+}
+.rounded-bottom {
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+.rounded-right {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+
+.rounded-md {
+    border-radius: 10px !important;
+}
+.rounded-lg {
+    border-radius: 30px !important;
+}
+
+//Border
+.border {
+    border: 1px solid $gray-200 !important;
+}
+.border-top {
+    border-top: 1px solid $gray-200 !important;    
+}
+.border-bottom {
+    border-bottom: 1px solid $gray-200 !important;    
+}
+.border-left {
+    border-left: 1px solid $gray-200 !important;    
+}
+.border-right {
+    border-right: 1px solid $gray-200 !important;    
+}
+
+//Small
+.small, small {
+    font-size: 0.9em;
+}
+
+//card
+.card {
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+//Offcanvas
+.offcanvas {
+    .offcanvas-header {
+        height: 71px;
+        .dark-version {
+            display: none;
+        }
+        .light-version {
+            display: inline-block;
+        }
+        .btn-close {
+            color: $dark;
+            background: none;
+        }
+    }
+    .offcanvas-footer {
+        height: 60px;
+    }
+    &.offcanvas-end {
+        width: 340px;
+    }
+}

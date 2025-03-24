@@ -1,0 +1,9 @@
+.container-network {
+	display: flex;
+	align-items: flex-end;
+	gap: 1.2rem;
+
+	&__item {
+		cursor: pointer;
+	}
+}

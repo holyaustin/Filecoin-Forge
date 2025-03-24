@@ -1,0 +1,12 @@
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+      <p-button icon="pi pi-home" class="mr-2" [routerLink]="['/']" styleClass="p-button-outlined"></p-button>
+      <p-button label="{{walletButtonDisplay}}" [loading]="loading" icon="pi pi-plus" class="mr-2" (onClick)="connectWallet()"></p-button>
+      <p-button label="Submit Contract" pTooltip="Submit KYContract; connected wallet required." icon="pi pi-upload" styleClass="p-button-success" [disabled]="!walletConnected" [routerLink]="['/submit-kycontract']"></p-button>
+  </div>
+  <div class="p-toolbar-group-end">
+      <p-button label="Search Contract Scores" icon="pi pi-search" class="mr-2" [routerLink]="['/search-kycontract']"></p-button>
+      <p-button label="Submit Objection" pTooltip="Submit KYContract; connected wallet required." icon="pi pi-times" styleClass="p-button-danger" [routerLink]="['/submit-objection']" [disabled]="!walletConnected"></p-button>
+  </div>
+</p-toolbar>
+<router-outlet></router-outlet>

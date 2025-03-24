@@ -1,0 +1,73 @@
+.container {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  gap: 0 40px;
+}
+
+.divider {
+    width: 1px;
+    height: 90vh;
+    background-color: #008c7345;
+}
+
+.walletContainer {
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+    background-color: #008c7345;
+}
+
+.walletHeader {
+    font-size: 25px;
+    font-weight: 700;
+    color: #008c73;
+    margin-bottom: 10px;
+}
+
+.balance {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.transaction {
+    font-size: 25px;
+    font-weight: 700;
+    color: #008c73;
+    margin-bottom: 10px;
+}
+
+.transactionHeader {
+    display: flex;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid black;
+    padding: 10px;
+    gap: 0 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tableDivider {
+    width: 1px;
+    height: 20px;
+    background-color: black;
+}
+
+
+.transactionMemberTable {
+    display: flex;
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+    gap: 0 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.transactionMemberTable:last-child {
+    border-radius: 0 0 5px 5px;
+
+}

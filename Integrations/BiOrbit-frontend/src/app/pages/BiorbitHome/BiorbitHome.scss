@@ -1,0 +1,15 @@
+.home {
+	&-banner {
+		background-image: url('../../../assets/images/banner.png');
+		background-position: center;
+		background-size: cover;
+		opacity: 0.78; /* 50% transparent */
+	}
+
+	&_buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.3rem;
+	}
+}

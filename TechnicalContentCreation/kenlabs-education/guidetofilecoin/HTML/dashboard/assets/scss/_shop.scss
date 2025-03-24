@@ -1,0 +1,68 @@
+//
+// _shop.scss
+//
+
+//Shopping
+.shop-features {
+    .category-title {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        z-index: 1;
+    }
+}
+.shop-list {
+    .shop-image {
+        .overlay-work,
+        .shop-icons { 
+            position: absolute;
+            opacity: 0; 
+            transition: all 0.5s ease;
+        }
+        .overlay-work {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            .out-stock {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+        .shop-icons {
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        &:hover {
+            .overlay-work,
+            .shop-icons {
+                opacity: 1;
+            }
+        }
+    }
+    .content {
+        .product-name {
+            transition: all 0.5s ease;
+            &:hover {
+                color: $primary !important;
+            }
+        }
+    }
+    .label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 2;
+    }
+    .qty-btn {
+        pointer-events: none; 
+        width: 65px;
+        padding-left: 15px;
+    }
+}

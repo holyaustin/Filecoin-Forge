@@ -1,0 +1,70 @@
+/* Template Name: Landrick - Admin Dashboard Template
+   Author: Shreethemes
+   Website: https://shreethemes.in/
+   Mail: support@shreethemes.in
+   Version: 4.0.0
+   Updated: March 2022
+   File Description: Main Css file of the template
+*/
+/*********************************/
+/*         INDEX                 */
+/*================================
+ *     01.  Variables            *
+ *     02.  Bootstrap Custom     *
+ *     03.  Components           *
+ *     04.  General              *
+ *     05.  Helper               *
+ *     06.  Menu                 *
+ *     07.  Home / Landing       *
+ *     08.  Features / Services  *
+ *     09.  Chat                 *
+ *     10.  Testi                *
+ *     11.  Blog                 *
+ *     12.  Calendar             *
+ *     13.  Shop                 *
+ *     14.  price                *
+ *     15.  User                 *
+ *     17.  Team                 *
+ *     18.  Simple Bar           *
+ *     19.  Works                *
+ *     20.  Footer               *
+ ================================*
+
+ *********************************
+ *         RTL SCSS              *
+ *********************************
+ *     01.  Bootstrap Custom RTL *
+ *     02.  Components RTL       *
+ *     03.  General RTL          *
+ *     04.  Helper RTL           *
+ *     05.  Menu RTL             *
+ *     06.  Common RTL           *
+ ================================*/
+
+@import "variables";
+@import "bootstrap-custom";
+@import "components";
+@import "general";
+@import "helper";
+@import "menu";
+@import "home";
+@import "features";
+@import "chat";
+@import "testi";
+@import "blog";
+@import "calendar";
+@import "shop";
+@import "price";
+@import "user";
+@import "team";
+@import "simplebar";
+@import "work";
+@import "footer";
+
+// RTL Version
+@import "rtl/bootstrap-custom-rtl";
+@import "rtl/components-rtl";
+@import "rtl/general-rtl";
+@import "rtl/helper-rtl";
+@import "rtl/menu-rtl";
+@import "rtl/common-rtl";

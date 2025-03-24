@@ -1,0 +1,78 @@
+<!-- header -->
+<div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between z-10">
+    <div>
+    </div>
+    <div>
+        <app-wallet></app-wallet>
+    </div>
+</div>
+
+<div>
+    <div class="playlist-header">
+        <div class="bg-playlist-header" style="background-color: rgb(64, 64, 64)"></div>
+        <div class="bg-playlist-header"
+            style="background: linear-gradient(transparent 0, rgba(0, 0, 0, 0.5) 100%), var(--background-noise)"></div>
+        <div class="flex items-end ml-8" style="z-index: 0">
+            <div>
+                <img [src]="playlist.thumbnailUrl" class="h-48 w-48 mr-4 shadow-md" />
+            </div>
+            <div>
+                <div class="text-sm capitalize">{{ type }}</div>
+                <div class="text-6xl font-bold mt-2 mb-4">{{ playlist.name }}</div>
+                <div class="text-base">{{ playlist.description }}</div>
+                <div class="text-sm">
+                    <span class="font-semibold">{{ playlist.creator }}</span> • {{ playlist?.songs.length }} songs •
+                    <span class="text-neutral-300">{{ totalDuration() }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-playlist-gradient" style="background-color: rgb(83, 83, 83);"></div>
+
+    <div class="overflow-y-scroll scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-neutral-900"
+        style="height: 52vh;">
+        <div class="px-8 py-3 flex relative">
+            <button><i class="material-icons text-6xl text-green-500" *ngIf="!isPlaying"
+                    (click)="playPlaylist()">play_circle_filled</i></button>
+            <button><i class="material-icons text-6xl text-green-500" *ngIf="isPlaying"
+                    (click)="pause()">pause_circle_filled</i></button>
+        </div>
+        <div class="px-8 relative">
+            <div class="flex p-2 uppercase text-sm">
+                <div class="w-12 text-center">#</div>
+                <div class="w-2/4">Title</div>
+                <div class="w-32">Date Added</div>
+                <div class="w-16"></div>
+                <div class="w-16 text-right"><i class="material-icons">access_time</i></div>
+            </div>
+            <div class="border-b border-neutral-800 mb-4"></div>
+            <div class="flex p-2 hover:bg-neutral-700 hover:rounded-sm hover:cursor-pointer"
+                *ngFor="let song of playlist.songs; let i = index" (dblclick)="playSong(song)">
+                <div class="w-12 flex items-center justify-center">
+                    <span *ngIf="!song.playing">{{ i + 1 }}</span>
+                    <img *ngIf="song.playing" width="14" height="14" alt=""
+                        src="/assets/images/equaliser-animated-green.gif">
+                </div>
+                <div class="w-2/4 flex">
+                    <img [src]="song.thumbnailUrl" class="w-10 h-10 mr-4" />
+
+                    <div>
+                        <div class="text-base" *ngIf="!song.playing">{{ song.title }}</div>
+                        <div class="text-base text-green-600" *ngIf="song.playing">{{ song.title }}</div>
+                        <div class="text-sm text-neutral-400">{{ song.artist.name }}</div>
+                    </div>
+                </div>
+                <div class="w-32 flex items-center">{{ timeToFromNow(song.created) }}</div>
+                <div class="w-16 flex items-center justify-end hover:cursor-pointer pr-3">
+                    <i class="material-icons text-green-600" *ngIf="song.liked"
+                        (click)="removeLikeSong(song)">favorite</i>
+                        <i class="material-icons text-green-600" *ngIf="!song.liked"
+                        (click)="addLikeSong(song)">favorite_border</i>
+                </div>
+                <div class="w-16 flex items-center justify-center">{{ secondsToTime(song.duration) }}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,63 @@
+//
+// work.scss
+//
+
+/*********************************/
+/*         Works & Portfolios    */
+/*===============================*/
+
+.work-container {
+    &.work-classic {
+        .work-image {
+            transition: all 0.5s ease;
+            &:hover {
+                box-shadow: $shadow;
+            }
+        }
+    }
+    &.work-classic,
+    &.work-modern {
+        .content {
+            .title {
+                font-size: 18px;
+                transition: all 0.5s ease;
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+            .tag {
+                font-size: 15px !important;
+            }
+        }
+    }
+    &.work-modern {
+        img {
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+}
+
+//Tobii Lighbox
+.tobii__btn svg {
+    height: 30px;
+    width: auto;
+}
+.tobii__counter {
+    font-size: 16px;
+}
+.tobii-zoom {
+    display: block !important;
+}
+
+.tobii-zoom__icon {
+    display: none;
+}
+
+#grid {
+    padding: 0 !important;
+}

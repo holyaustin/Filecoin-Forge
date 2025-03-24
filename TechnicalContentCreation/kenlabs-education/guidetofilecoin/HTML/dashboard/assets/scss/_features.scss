@@ -1,0 +1,81 @@
+//
+// _feature.scss
+//
+.features {
+    @each $name,
+    $value in $colors {
+        &.feature-#{$name} {
+            .title {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+            .icon {
+                color: $value !important;
+                background-color: rgba($value, 0.04) !important;
+            }
+            .link {
+                color: $value !important;
+            }
+            &.key-feature {
+                .icon {
+                    background: linear-gradient(45deg, transparent, rgba($value, 0.1)) !important;
+                }
+            }
+        }
+        &.feature-bg-#{$name} {
+            &:hover {
+                background-color: $value !important;
+            }
+        }
+        
+    }
+}
+
+.features {
+    transition: all 0.5s ease;
+    .icon {
+        height: 65px;
+        width: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-weight: 500;
+    }
+
+    .big-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        opacity: 0.05;
+        font-size: 120px;
+    }
+    .titles,
+    .icons,
+    .para,
+    .big-icon {
+        transition: all 0.5s ease;
+    }
+    &:hover {
+        .titles,
+        .icons,
+        .big-icon {
+            color: $white !important;
+        }
+        .para {
+            color: rgba($white, 0.5) !important;
+        }
+    }
+}
+
+.key-feature {
+    .icon {
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+}

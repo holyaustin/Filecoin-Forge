@@ -1,0 +1,45 @@
+{
+  "name": "safe-hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@gelatonetwork/gasless-wallet": "^0.0.3",
+    "@gelatonetwork/relay-sdk": "^3.5.0",
+    "@gnosis.pm/safe-react-components": "^1.2.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.11.14",
+    "@polybase/client": "^0.3.38",
+    "@safe-global/auth-kit": "^0.1.0-alpha.2",
+    "@safe-global/onramp-kit": "^0.1.0-alpha.2",
+    "@safe-global/relay-kit": "^0.1.0-alpha.2",
+    "@safe-global/safe-core-sdk": "^3.3.2",
+    "@safe-global/safe-core-sdk-types": "^1.9.0",
+    "@safe-global/safe-ethers-lib": "^1.9.2",
+    "@safe-global/safe-react-components": "^2.0.3",
+    "@safe-global/safe-service-client": "^2.0.0",
+    "@safe-global/safe-web3-lib": "^1.9.2",
+    "@superfluid-finance/sdk-core": "^0.6.3",
+    "@web3auth/base": "^5.1.0",
+    "@web3auth/modal": "^5.1.0",
+    "@web3auth/openlogin-adapter": "^5.1.0",
+    "ethers": "^5.7.2",
+    "graphql": "^16.6.0",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-svg": "^16.1.10",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4"
+  }
+}

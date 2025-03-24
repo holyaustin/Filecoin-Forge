@@ -1,0 +1,24 @@
+//
+// testi.scss
+//
+
+/*********************************/
+/*         Testimonial           */
+/*===============================*/
+
+.tns-nav {
+    text-align: center;
+    margin-top: 10px;
+    button {
+        border-radius: 3px;
+        background: rgba($primary, 0.5) !important;
+        transition: all 0.5s ease;
+        border: none;
+        margin: 0 5px;
+        padding: 5px;
+        &.tns-nav-active {
+            background: $primary !important;
+            transform: rotate(45deg);
+        }
+    }
+}

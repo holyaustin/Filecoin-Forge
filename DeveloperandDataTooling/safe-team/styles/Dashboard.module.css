@@ -1,0 +1,50 @@
+.app {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  height: 100vh;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    color: black;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.memberTable {
+    display: flex;
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+    gap: 0 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.memberTable:last-child {
+    border-radius: 0 0 5px 5px;
+
+}
+
+.memberTableHeader {
+    display: flex;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid black;
+    padding: 10px;
+    gap: 0 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: black;
+}
+

@@ -1,0 +1,160 @@
+//
+// menu.scss
+//
+
+/*********************************/
+/*     Menu-DARK                 */
+/*===============================*/
+
+//
+//_menu.scss
+//
+
+.page-wrapper {
+    &.landrick-theme {
+        .sidebar-wrapper {
+            box-shadow: $shadow;
+            background-color: $white;
+            .sidebar-header,
+            .sidebar-menu {
+                border-top-color: rgba($dark, 0.03);
+            }
+            .sidebar-header .user-info .user-role,
+            .sidebar-header .user-info .user-status,
+            .sidebar-brand > a,
+            .sidebar-menu li a {
+                color: rgba($dark, 0.5);
+            }
+            .sidebar-menu li:hover > a,
+            .sidebar-menu li.active > a,
+            .sidebar-menu li:active > a,
+            .sidebar-menu li:active > a:before,
+            .sidebar-menu li:hover > a:before,
+            .sidebar-menu li.active > a:before,
+            .sidebar-menu .sidebar-dropdown.active > a,
+            .sidebar-header .user-info,
+            .sidebar-brand > a:hover {
+                color: $dark !important;
+            }
+            .sidebar-menu {
+                li {
+                    a {
+                        i {
+                            background-color: rgba($dark, 0.03);
+                        }
+                    }
+                    &:hover,
+                    &.active {
+                        i {
+                            background-color: rgba($dark, 0.05);
+                        }
+                    }
+                }
+
+                .sidebar-dropdown {
+                    > a:after {
+                        color: rgba($dark, 0.1); 
+                    }
+                    &:hover,
+                    &.active {
+                        > a:after {
+                            color: $dark;
+                        }
+                    }
+                    
+                    .sidebar-submenu {
+                        ul {
+                            li {
+                                a {
+                                    &:before {
+                                        color: rgba($dark, 0.5); 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+            .sidebar-brand {
+                .logo-dark-mode {
+                    display: inline-block;
+                }
+                .logo-light-mode {
+                    display: none;
+                }
+            }
+        }
+    }
+    .sidebar-wrapper {
+        .sidebar-menu {
+            li {
+                a {
+                    i {
+                        background-color: $gray-800;
+                    }
+                }
+            }
+
+            .sidebar-dropdown {
+                > a:after {
+                    color: $dark; 
+                }
+                
+                .sidebar-submenu {
+                    ul {
+                        li {
+                            a {
+                                &:before {
+                                    color: $dark; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+        &.sidebar-colored {
+            background-color: $primary;
+        }
+        &.sidebar-dark {
+            background-color: $white;
+        }
+
+        &.sidebar-colored {
+            .sidebar-brand {
+                .sidebar-colored {
+                    display: inline-block;
+                }
+                .logo-dark-mode {
+                    display: none !important;
+                }
+                .logo-light-mode {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    .page-content {
+        .top-header {
+            .header-bar {
+                background: $white;
+                box-shadow: $shadow;
+                .logo-icon {
+                    .big {
+                        .logo-dark-mode {
+                            display: inline-block;
+                        }
+                        .logo-light-mode {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-footer {
+    box-shadow: $shadow;
+}

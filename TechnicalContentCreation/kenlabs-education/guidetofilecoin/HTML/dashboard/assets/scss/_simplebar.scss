@@ -1,0 +1,15 @@
+//
+// _smiple-bar.scss
+//
+
+.simplebar-track {
+    &.simplebar-vertical {
+        width: 8px !important;
+        .simplebar-scrollbar {
+            &:before {
+                width: 4px !important;
+                background: $gray-500 !important;
+            }
+        }
+    }
+}

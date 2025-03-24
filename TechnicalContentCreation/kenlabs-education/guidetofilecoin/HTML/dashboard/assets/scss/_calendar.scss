@@ -1,0 +1,106 @@
+//
+// _calendar.scss
+//
+
+.fc-event-title-container,
+#external-events .fc-event {
+    cursor: pointer;
+    margin: 4px 2px;
+}
+#external-events {
+    .fc-event {
+        .fc-event-main {
+            padding: 5px;
+        }
+    }
+}
+
+.fc {
+    .fc-non-business {
+        background-color: transparent;
+    }
+
+    .fc-daygrid-day-number {
+        padding: 5px;
+        font-weight: 600;
+        color: $primary;
+    }
+
+    .fc-col-header-cell-cushion {
+        padding: 8px 4px !important;
+        color: $primary;
+    }
+
+    .fc-scrollgrid-liquid {
+        border-radius: 5px !important;
+    }
+}
+
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-color: $gray-200 !important;
+}
+
+.fc-header-toolbar {
+    .fc-toolbar-chunk {
+        .fc-toolbar-title {
+            font-size: 18px !important;
+        }
+    }
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-start {
+    margin: auto 8px 4px;
+}
+
+.fc-event-main {
+    background-color: $primary;
+}
+
+.fc-daygrid-dot-event {
+    background: $gray-100;
+    border: 1px solid $gray-200;
+    &:hover {
+        background-color: $gray-200;
+    }
+}
+
+.fc {
+    .fc-button {
+        padding: 4px 8px;
+        font-size: 13px !important;
+        background-color: $primary !important;
+        border: 1px solid $primary !important;
+        color: $white !important;
+        text-transform: capitalize !important;
+        &:disabled,
+        &:disabled:hover,
+        &:disabled:focus,
+        &:disabled:active,
+        &:disabled.active,
+        &:disabled.focus {
+            background-color: rgba($primary, 0.1) !important;
+            border: 1px solid rgba($primary, 0.1) !important;
+            color: $primary !important;
+        }
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus {
+            background-color: darken($primary, 5%) !important;
+            border-color: darken($primary, 5%) !important;
+        }
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+    .fc-icon {
+        font-size: 16px !important;
+    }
+}
+
+#calendar {
+    max-width: 1240px;
+}
